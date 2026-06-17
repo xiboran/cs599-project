@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  study-assistant:
+    build: .
+    container_name: grad-study-assistant
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
