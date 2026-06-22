@@ -1,12 +1,12 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from agent_core import LearningAgent
-from memory.user_memory import UserMemory
-from rag.vector_store import search_knowledge
-from tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
+from backend.agents.agent_core import LearningAgent
+from backend.memory.user_memory import UserMemory
+from backend.rag.vector_store import search_knowledge
+from backend.tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
 
 
 class GradStudentAssistant:

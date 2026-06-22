@@ -6,8 +6,8 @@ from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 from typing import List, Dict, Any
 
-from backend.tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
-from backend.rag.vector_store import search_knowledge
+from tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
+from rag.vector_store import search_knowledge
 
 
 class LearningAgent:

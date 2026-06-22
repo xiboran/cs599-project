@@ -1,5 +1,5 @@
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 from backend.tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
 
 def test_course_schedule():

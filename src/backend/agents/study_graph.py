@@ -3,7 +3,7 @@ import os
 import sys
 from typing import TypedDict, Literal
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from langchain_openai import ChatOpenAI
 from langchain.tools import tool
@@ -13,8 +13,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langgraph.graph import StateGraph, END
 
-from tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
-from rag.vector_store import search_knowledge
+from backend.tools.course_tools import get_course_schedule, get_exam_info, get_homework_status, get_study_tips
+from backend.rag.vector_store import search_knowledge
 
 
 env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env.example")
